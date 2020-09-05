@@ -1,4 +1,4 @@
-import React, { ButtonHTMLAttributes, ReactChildren } from "react";
+import React, { ButtonHTMLAttributes, ReactNode } from "react";
 
 import { StyledButton } from "./styles";
 import { responsiveStyleAndVariantsProps } from "../sharedPropTypes";
@@ -6,7 +6,7 @@ import { responsiveStyleAndVariantsProps } from "../sharedPropTypes";
 export interface ButtonProps
   extends ButtonHTMLAttributes<any>,
     responsiveStyleAndVariantsProps {
-  children?: ReactChildren;
+  children?: ReactNode;
 }
 
 export const Button = (props: ButtonProps) => {

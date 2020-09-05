@@ -1,4 +1,4 @@
-import React, { HtmlHTMLAttributes, ReactChildren } from "react";
+import React, { HtmlHTMLAttributes, ReactNode } from "react";
 
 import { StyledTextArea } from "./styles";
 import { fontSize, responsiveStyleAndVariantsProps } from "../sharedPropTypes";
@@ -7,7 +7,7 @@ export interface TextAreaProps
   extends HtmlHTMLAttributes<any>,
     responsiveStyleAndVariantsProps {
   fontSize: fontSize;
-  children: ReactChildren;
+  children: ReactNode;
 }
 
 export const TextArea = ({

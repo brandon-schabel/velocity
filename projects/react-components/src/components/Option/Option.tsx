@@ -1,10 +1,10 @@
-import React, {ReactChildren} from "react";
+import React, { ReactNode } from "react";
 import { StyledOption } from "./styles";
 import { responsiveStyleAndVariantsProps, fontSize } from "../sharedPropTypes";
 
 export interface OptionProps extends responsiveStyleAndVariantsProps {
   fontSize?: fontSize;
-  children: ReactChildren;
+  children: ReactNode;
 }
 
 export const Option = (props: OptionProps) => {

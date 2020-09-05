@@ -1,4 +1,4 @@
-import React, { HTMLAttributes, ReactChildren } from "react";
+import React, { HTMLAttributes, ReactNode } from "react";
 
 import {
   StyledH1,
@@ -15,7 +15,7 @@ import { fontSize } from "../sharedPropTypes";
 export interface TextProps extends HTMLAttributes<any> {
   tag: string;
   fontSize?: fontSize;
-  children?: ReactChildren;
+  children?: ReactNode;
 }
 
 export const Text = ({

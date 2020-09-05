@@ -1,4 +1,4 @@
-import React, { useState, ReactChildren, ReactNode } from "react";
+import React, { useState, ReactNode } from "react";
 import { StyledRadioGroup } from "./styles";
 import { RadioButton } from "../RadioButton";
 import { generateKey } from "../../utils/generateKey";
@@ -17,7 +17,7 @@ export interface RadioGroupProps extends responsiveStyleAndVariantsProps {
     index: number | string,
     additionalValues: any
   ) => void;
-  children: ReactChildren;
+  children: ReactNode;
   LegendTextComponent: ReactNode;
   radioButtonVariants: responsiveStyleAndVariantsProps;
 }

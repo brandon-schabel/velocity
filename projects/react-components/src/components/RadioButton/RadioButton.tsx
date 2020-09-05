@@ -1,11 +1,11 @@
-import React, { ReactChildren } from "react";
+import React, {ReactNode}  from "react";
 import { StyledRadioButton } from "./styles";
 
 import { responsiveStyleAndVariantsProps, fontSize } from "../sharedPropTypes";
 
 export interface RadioButtonProps extends responsiveStyleAndVariantsProps {
   fontSize?: fontSize;
-  children?: ReactChildren;
+  children?: ReactNode;
   index: string | number;
   label?: string | null;
   value: any;

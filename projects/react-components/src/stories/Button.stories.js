@@ -8,6 +8,6 @@ export default {
 
 export const Component = () => {
   return (
-    <Button onClick={() => console.log("Button Clicked")} >Click Me Plz</Button>
+    <Button onClick={() => console.log("Button Clicked")}>Click Me Plz</Button>
   );
 };

@@ -1,10 +1,10 @@
-import React, { ReactChildren } from "react";
+import React, { ReactNode } from "react";
 import { StyledSelect } from "./styles";
 import { responsiveStyleAndVariantsProps, fontSize } from "../sharedPropTypes";
 
 export interface SelectProps extends responsiveStyleAndVariantsProps {
   fontSize?: fontSize;
-  children?: ReactChildren;
+  children?: ReactNode;
 }
 
 export const Select = (props: SelectProps) => {

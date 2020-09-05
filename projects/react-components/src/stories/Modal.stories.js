@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Modal, Button } from "../components";
 
 export default {
@@ -7,12 +7,18 @@ export default {
 };
 
 export const Component = () => {
-  const [modalOpen, setModalOpen] = React.useState(false);
+  const [modalOpen, setModalOpen] = useState(false);
+
+  const handleCloseModal = () => {
+    setModalOpen(false);
+  };
+
   return (
     <div>
       Click Me
       <Button onClick={() => setModalOpen(!modalOpen)}>Open Modal</Button>
-      <Modal isOpen={modalOpen}>
+      <Modal isOpen={modalOpen} handleCloseModal={handleCloseModal}>
+        <Button onClick={handleCloseModal}>Close</Button>
         <div>Modal Content</div>
       </Modal>
       <div id="modal-portal" />

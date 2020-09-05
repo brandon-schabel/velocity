@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, ReactChildren} from "react";
+import React, { useEffect, useRef, ReactNode } from "react";
 import { Portal } from "./Portal";
 import {
   ModalBackground,
@@ -10,7 +10,7 @@ import { responsiveStyleAndVariantsProps } from "../sharedPropTypes";
 export interface ModalProps {
   modalContentContainer: responsiveStyleAndVariantsProps;
   modalBackDrop: responsiveStyleAndVariantsProps;
-  children: ReactChildren;
+  children: ReactNode;
   handleCloseModal: () => void;
   isOpen: boolean;
 }
