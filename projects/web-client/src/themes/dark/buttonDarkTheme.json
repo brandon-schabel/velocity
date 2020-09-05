@@ -1,0 +1,19 @@
+{
+  "color": {
+    "primary": "white",
+    "secondary": "black"
+  },
+  "background": {
+    "primary": "black",
+    "secondary": "white"
+  },
+  "border-color": {
+    "primary": "white",
+    "secondary": "black"
+  },
+  "border-radius": {
+    "primary":"5px",
+    "secondary": "10px"
+  },
+  "custom": {}
+}

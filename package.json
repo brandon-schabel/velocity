@@ -1,0 +1,26 @@
+{
+  "name": "tesla-deets",
+  "version": "1.0.0",
+  "description": "",
+  "keywords": [],
+  "license": "ISC",
+  "author": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "pnpm recursive run build",
+    "clean": "pnpm recursive exec -- rm -rf node_modules; rm shrinkwrap.yaml; rm -rf node_modules",
+    "server:start": "pnpm recursive run start --filter @tesla-deets/api-server",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "web:start": "pnpm recursive run start --filter @tesla-deets/web-client",
+    "clear-modules": "find . -name 'node_modules' -type d -prune -exec rm -rf '{}' +"
+  },
+  "engines": {
+    "node": ">=10",
+    "pnpm": ">=3"
+  },
+  "dependencies": {
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "styled-components": "^5.0.1"
+  }
+}

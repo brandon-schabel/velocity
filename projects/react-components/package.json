@@ -1,0 +1,68 @@
+{
+  "name": "@brandon-schabel/react-components",
+  "version": "0.0.2",
+  "main": "dist/index.js",
+  "module": "dist/index.modern.js",
+  "source": "./index.ts",
+  "repository": {
+    "type": "git",
+    "url": "ssh://git@github.com:brandon-schabel/tesla-deets-monorepo.git",
+    "directory": "projects/react-components"
+  },
+  "scripts": {
+    "start": "node scripts/start.js",
+    "build": "microbundle-crl --no-compress --format modern,cjs",
+    "build-watch": "microbundle-crl watch --no-compress --format modern,cjs",
+    "postbuild": "tsc --emitDeclarationOnly",
+    "test": "node scripts/test.js",
+    "storybook": "start-storybook -p 9009 -s public",
+    "prepare-version": "pnpm install && pnpm run build",
+    "create-patch": "pnpm run prepare-version && pnpm version patch",
+    "create-minor": "pnpm run prepare-version && pnpm version minor",
+    "create-major": "pnpm run prepare-version && npm version major",
+    "build-storybook": "build-storybook -s public"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "@babel/plugin-proposal-decorators": "^7.8.3",
+    "@storybook/addon-actions": "^5.3.18",
+    "@storybook/addon-links": "^5.3.18",
+    "@storybook/addons": "^5.3.18",
+    "@storybook/preset-typescript": "^3.0.0",
+    "@storybook/react": "^5.3.18",
+    "@types/node": "^12.0.0",
+    "@types/react": "^16.9.32",
+    "@types/react-dom": "^16.9.6",
+    "@types/styled-components": "^5.0.1",
+    "babel-loader": "8.1.0",
+    "cross-env": "^7.0.2",
+    "microbundle-crl": "^0.13.9",
+    "react": "link:../../node_modules/react",
+    "react-dom": "link:../../node_modules/react-dom",
+    "styled-breakpoints": "^8.1.0",
+    "styled-components": "link:../../node_modules/styled-components",
+    "typescript": "~3.7.2"
+  },
+  "peerDependencies": {
+    "react": "^16",
+    "react-dom": "^16",
+    "styled-components": "^5"
+  },
+  "files": [
+    "dist"
+  ]
+}
