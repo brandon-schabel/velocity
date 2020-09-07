@@ -4,7 +4,8 @@ module.exports = {
   addons: [
     "@storybook/preset-typescript",
     "@storybook/addon-actions",
-    "@storybook/addon-links"
+    "@storybook/addon-links",
+    '@storybook/addon-contexts/register'
   ],
   webpackFinal: async (config, { configType }) => {
     // `configType` has a value of 'DEVELOPMENT' or 'PRODUCTION'
@@ -20,5 +21,6 @@ module.exports = {
 
     // Return the altered config
     return config;
-  }
+  },
+
 };

@@ -1,25 +1,39 @@
 import React from "react";
-import logo from "./logo.svg";
-import "./App.css";
-import { Button } from "my-components";
+import { Tabs, Button } from "@brandon-schabel/velocity-components";
+import "@brandon-schabel/velocity-components/dist/index.css";
+
+const tabsConfig = [
+  {
+    tabName: "Tab 1",
+    component: (
+      <div>
+        This is my Component 1<Button>This is a test button</Button>
+      </div>
+    )
+  },
+  {
+    tabName: "Tab 2",
+    component: (
+      <div>
+        This is my Component 2<Button>This is a test button</Button>
+      </div>
+    )
+  },
+  {
+    tabName: "Tab 3",
+    component: (
+      <div>
+        This is my Component 3<Button>This is a test button</Button>
+      </div>
+    )
+  }
+];
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-          <Button> Test </Button>
-        </a>
+        <Tabs tabsConfig={tabsConfig}> Test </Tabs>
       </header>
     </div>
   );

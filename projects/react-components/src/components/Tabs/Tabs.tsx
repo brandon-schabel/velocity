@@ -4,7 +4,7 @@ import { css } from "styled-components";
 import { StyledTabs } from "./styles";
 import { responsiveStyleAndVariantsProps } from "../sharedPropTypes";
 import { Button, Box } from "../index";
-import './tabs.styl'
+import "./tabs.styl";
 
 export interface tabsProps
   extends HtmlHTMLAttributes<any>,
@@ -32,7 +32,7 @@ export const Tabs = ({ children, tabsConfig, ...rest }: tabsProps) => {
   const renderTabHeader = () => {
     return (
       tabsConfig &&
-      tabsConfig.map((currConfig:any, index: number) => {
+      tabsConfig.map((currConfig: any, index: number) => {
         return (
           <Button
             mobStyles={[index === selectedTab ? selectedTabStyles : null]}
