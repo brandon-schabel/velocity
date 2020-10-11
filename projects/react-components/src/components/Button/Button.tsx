@@ -1,13 +1,15 @@
 import React, { ButtonHTMLAttributes, ReactNode } from 'react'
-import './Button.styl'
+
+import './button.styl'
 
 export interface ButtonProps extends ButtonHTMLAttributes<any> {
   children?: ReactNode
+  className?: string
 }
 
-export const Button = ({ children, ...rest }: ButtonProps) => {
+export const Button = ({ children, className = '', ...rest }: ButtonProps) => {
   return (
-    <button {...rest} className="vel-button">
+    <button {...rest} className={`vel-button ${className}`}>
       {children}
     </button>
   )

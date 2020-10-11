@@ -1,60 +1,51 @@
-import React, { HtmlHTMLAttributes, ReactNode, useState } from "react";
-import { css } from "styled-components";
+import React, { HtmlHTMLAttributes, ReactNode, useState } from 'react'
 
-import { StyledTabs } from "./styles";
-import { responsiveStyleAndVariantsProps } from "../sharedPropTypes";
-import { Button, Box } from "../index";
-import "./tabs.styl";
+import { Button, Box } from '../index'
+import './tabs.styl'
 
-export interface tabsProps
-  extends HtmlHTMLAttributes<any>,
-    responsiveStyleAndVariantsProps {
-  children?: React.ReactNode;
-  tabsConfig: any;
+export interface tabsProps extends HtmlHTMLAttributes<any> {
+  children?: ReactNode
+  tabsConfig: any
 }
-
-const boxHeaderStyles = css`
-  display: flex;
-  flex-direction: row;
-`;
-
-const selectedTabStyles = css`
-  background-color: red;
-`;
+//
+// const selectedTabStyles = css`
+//   background-color: red;
+// `
 
 export const Tabs = ({ children, tabsConfig, ...rest }: tabsProps) => {
-  const [selectedTab, setSelectedTab] = useState(0);
+  const [selectedTab, setSelectedTab] = useState(0)
 
   const handleTabChange = (index: number) => {
-    setSelectedTab(index);
-  };
+    setSelectedTab(index)
+  }
 
   const renderTabHeader = () => {
     return (
       tabsConfig &&
       tabsConfig.map((currConfig: any, index: number) => {
+        const selectedClass = index === selectedTab ? '-selected' : ''
         return (
           <Button
-            mobStyles={[index === selectedTab ? selectedTabStyles : null]}
+            className={`vel-tabs-header-button${selectedClass}`}
             onClick={() => handleTabChange(index)}
           >
             {currConfig.tabName}
           </Button>
-        );
+        )
       })
-    );
-  };
+    )
+  }
 
   const renderTabContent = () => {
     if (tabsConfig && tabsConfig[selectedTab]) {
-      return tabsConfig[selectedTab].component;
+      return tabsConfig[selectedTab].component
     }
-  };
+  }
 
   return (
-    <StyledTabs {...rest}>
-      <Box className="tabs-header">Header {renderTabHeader()}</Box>
-      <Box>{renderTabContent()}</Box>
-    </StyledTabs>
-  );
-};
+    <Box className="vel-tabs" {...rest}>
+      <Box className="vel-tabs-header">Header {renderTabHeader()}</Box>
+      <Box className="vel-tabs-content">{renderTabContent()}</Box>
+    </Box>
+  )
+}

@@ -1,8 +1,4 @@
-import styled from 'styled-components'
-
-import { variantsAndStyles } from '../../utils/variantsAndStyles'
-
-export const StyledRadioButton = styled.input`
+.vel-radio {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
@@ -20,21 +16,21 @@ export const StyledRadioButton = styled.input`
   margin-left: 0px;
   outline: none;
 
-  :checked::before {
+  &:checked::before {
     position: absolute;
     font: 13px/1 'Open Sans', sans-serif;
     font-weight: 900;
     left: 11px;
     top: 7px;
-    content: '\\02143';
+    content: '\02143';
     transform: rotate(40deg);
   }
 
-  :hover {
+  &:hover {
     background-color: #f7f7f7;
   }
-  :checked {
+
+  &:checked {
     background-color: #f1f1f1;
   }
-  ${variantsAndStyles()}
-`
+}

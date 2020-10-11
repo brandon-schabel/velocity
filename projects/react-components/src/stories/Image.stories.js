@@ -1,11 +1,9 @@
-import React from "react";
-import { Image } from "../components";
+import React from 'react'
+import { Image } from '../components'
 
 export default {
-  title: "Image",
-  component: Image
-};
+  title: 'Image',
+  component: Image,
+}
 
-export const Component = () => (
-  <Image />
-);
+export const Component = () => <Image />

@@ -1,4 +1,4 @@
-import { getRandInt } from "./getRandInt";
+import { getRandInt } from './getRandInt'
 
 /**
  *
@@ -6,4 +6,4 @@ import { getRandInt } from "./getRandInt";
  * @returns {string}
  */
 export const generateKey = pre =>
-  `${pre ? pre : getRandInt(0, 200)}_${new Date().getTime()}`;
+  `${pre ? pre : getRandInt(0, 200)}_${new Date().getTime()}`

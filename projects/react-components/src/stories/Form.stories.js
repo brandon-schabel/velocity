@@ -1,11 +1,9 @@
-import React from "react";
-import { Form } from "../components";
+import React from 'react'
+import { Form } from '../components'
 
 export default {
-    title: "Form",
-    component: Form
-};
+  title: 'Form',
+  component: Form,
+}
 
-export  const Component = () => (
-    <Form>Click Me</Form>
-);
+export const Component = () => <Form>Click Me</Form>

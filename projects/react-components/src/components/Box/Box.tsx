@@ -1,14 +1,16 @@
-import React, {HtmlHTMLAttributes, ReactNode } from "react";
+import React, { HtmlHTMLAttributes } from 'react'
 
-import { StyledBox } from "./styles";
-import { responsiveStyleAndVariantsProps } from "../sharedPropTypes";
+import './box.styl'
 
-export interface boxProps
-  extends HtmlHTMLAttributes<any>,
-    responsiveStyleAndVariantsProps {
+export interface boxProps extends HtmlHTMLAttributes<any> {
   children?: React.ReactNode
+  className?: string
 }
 
-export const Box = (props: boxProps) => {
-  return <StyledBox {...props}>{props.children}</StyledBox>;
-};
+export const Box = ({ children, className = '', ...rest }: boxProps) => {
+  return (
+    <div {...rest} className={`vel-box ${className}`}>
+      {children}
+    </div>
+  )
+}

@@ -1,63 +1,53 @@
-import React, { useEffect, useRef, ReactNode } from "react";
-import { Portal } from "./Portal";
-import {
-  ModalBackground,
-  ModalContentContainer,
-  ModalPositioner
-} from "./styles";
-import { responsiveStyleAndVariantsProps } from "../sharedPropTypes";
+import React, { useEffect, useRef, ReactNode } from 'react'
+
+import { Portal } from './Portal'
+import './modal.styl'
 
 export interface ModalProps {
-  modalContentContainer: responsiveStyleAndVariantsProps;
-  modalBackDrop: responsiveStyleAndVariantsProps;
-  children: ReactNode;
-  handleCloseModal: () => void;
-  isOpen: boolean;
+  children: ReactNode
+  handleCloseModal: () => void
+  isOpen: boolean
 }
 
 export const Modal = ({
   children,
-  handleCloseModal = () => {},
-  modalContentContainer,
-  modalBackDrop,
-  isOpen = false
+  handleCloseModal = () => null,
+  isOpen = false,
 }: ModalProps) => {
-  const modalContentRef = useRef(null);
+  const modalContentRef = useRef(null)
 
   const handleClickOutside = (event: any) => {
     if (
       modalContentRef.current &&
+      // eslint-disable-next-line @typescript-eslint/ban-ts-comment
       // @ts-ignore
       !modalContentRef.current.contains(event.target)
     ) {
-      handleCloseModal();
+      handleCloseModal()
     }
-  };
+  }
 
   useEffect(() => {
     // Bind the event listener
-    document.addEventListener("mousedown", handleClickOutside);
+    document.addEventListener('mousedown', handleClickOutside)
     return () => {
       // Unbind the event listener on clean up
-      document.removeEventListener("mousedown", handleClickOutside);
-    };
-  });
+      document.removeEventListener('mousedown', handleClickOutside)
+    }
+  })
 
   return (
     <Portal isOpen={isOpen}>
       {isOpen && (
-        <ModalBackground {...modalBackDrop}>
-          <ModalPositioner>
-            <ModalContentContainer
-              ref={modalContentRef}
-              {...modalContentContainer}
-            >
+        <div className="vel-modal-background">
+          <div className="vel-modal-positioner">
+            <div className="vel-modal-content-container" ref={modalContentRef}>
               {/*<CloseButton />*/}
               {children}
-            </ModalContentContainer>
-          </ModalPositioner>
-        </ModalBackground>
+            </div>
+          </div>
+        </div>
       )}
     </Portal>
-  );
-};
+  )
+}

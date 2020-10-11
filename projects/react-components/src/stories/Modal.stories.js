@@ -1,17 +1,17 @@
-import React, { useState } from "react";
-import { Modal, Button } from "../components";
+import React, { useState } from 'react'
+import { Modal, Button } from '../components'
 
 export default {
-  title: "Modal",
-  component: Modal
-};
+  title: 'Modal',
+  component: Modal,
+}
 
 export const Component = () => {
-  const [modalOpen, setModalOpen] = useState(false);
+  const [modalOpen, setModalOpen] = useState(false)
 
   const handleCloseModal = () => {
-    setModalOpen(false);
-  };
+    setModalOpen(false)
+  }
 
   return (
     <div>
@@ -23,5 +23,5 @@ export const Component = () => {
       </Modal>
       <div id="modal-portal" />
     </div>
-  );
-};
+  )
+}
