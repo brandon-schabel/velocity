@@ -1,13 +1,9 @@
-import React, { InputHTMLAttributes } from "react";
-import { StyledInput } from "./styles";
-import { responsiveStyleAndVariantsProps, fontSize } from "../sharedPropTypes";
+import React, { InputHTMLAttributes } from 'react'
 
-export interface InputProps
-  extends InputHTMLAttributes<any>,
-    responsiveStyleAndVariantsProps {
-  fontSize: fontSize;
+import './input.styl'
+
+export type InputProps = InputHTMLAttributes<any>
+
+export const Input = (props: InputProps) => {
+  return <input className="vel-input" {...props} />
 }
-
-export const Input = ({ ...props }: InputProps) => {
-  return <StyledInput {...props} />;
-};

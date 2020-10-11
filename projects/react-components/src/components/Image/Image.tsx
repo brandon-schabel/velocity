@@ -1,14 +1,15 @@
-import React, { ImgHTMLAttributes, ReactNode} from "react";
+import React, { ImgHTMLAttributes, ReactNode } from 'react'
 
-import { StyledImage } from "./styles";
-import { responsiveStyleAndVariantsProps } from "../sharedPropTypes";
+import './image.styl'
 
-export interface ImageProps
-  extends ImgHTMLAttributes<any>,
-    responsiveStyleAndVariantsProps {
+export interface ImageProps extends ImgHTMLAttributes<any> {
   children?: ReactNode
 }
 
-export const Image = (props: ImageProps) => {
-  return <StyledImage {...props}>{props.children}</StyledImage>;
-};
+export const Image = ({ children, alt, ...rest }: ImageProps) => {
+  return (
+    <img className="vel-image" alt={alt} {...rest}>
+      {children}
+    </img>
+  )
+}

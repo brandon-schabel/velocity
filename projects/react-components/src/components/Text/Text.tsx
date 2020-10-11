@@ -1,90 +1,67 @@
-import React, { HTMLAttributes, ReactNode } from "react";
+import React, { HTMLAttributes, ReactNode } from 'react'
 
-import {
-  StyledH1,
-  StyledH2,
-  StyledH3,
-  StyledH4,
-  StyledH5,
-  StyledH6,
-  StyledP
-} from "./styles";
-
-import { fontSize } from "../sharedPropTypes";
+import './text.styl'
 
 export interface TextProps extends HTMLAttributes<any> {
-  tag: string;
-  fontSize?: fontSize;
-  children?: ReactNode;
+  tag: string
+  className?: string
+  children?: ReactNode
 }
 
 export const Text = ({
-  fontSize = {
-    mob: "16px",
-    tab: "24px",
-    desk: "32px",
-    lgDesk: "40px"
-  },
-  tag = "h1",
+  tag = 'h1',
+  className = '',
   children,
-  ...props
+  ...rest
 }: TextProps) => {
   switch (tag) {
-    case "h1":
+    case 'h1':
       return (
-        // @ts-ignore
-        <StyledH1 fontSize={fontSize} {...props}>
+        <h1 {...rest} className={`vel-h1 vel-text ${className}`}>
           {children}
-        </StyledH1>
-      );
-    case "h2":
+        </h1>
+      )
+    case 'h2':
       return (
-        // @ts-ignore
-        <StyledH2 fontSize={fontSize} {...props}>
+        <h2 {...rest} className={`vel-h2 vel-text ${className}`}>
           {children}
-        </StyledH2>
-      );
-    case "h3":
+        </h2>
+      )
+    case 'h3':
       return (
-        // @ts-ignore
-        <StyledH3 fontSize={fontSize} {...props}>
+        <h3 {...rest} className={`vel-h3 vel-text ${className}`}>
           {children}
-        </StyledH3>
-      );
-    case "h4":
+        </h3>
+      )
+    case 'h4':
       return (
-        // @ts-ignore
-        <StyledH4 fontSize={fontSize} {...props}>
+        <h4 {...rest} className={`vel-h4 vel-text ${className}`}>
           {children}
-        </StyledH4>
-      );
-    case "h5":
+        </h4>
+      )
+    case 'h5':
       return (
-        // @ts-ignore
-        <StyledH5 fontSize={fontSize} {...props}>
+        <h5 {...rest} className={`vel-h5 vel-text ${className}`}>
           {children}
-        </StyledH5>
-      );
-    case "h6":
+        </h5>
+      )
+    case 'h6':
       return (
-        // @ts-ignore
-        <StyledH6 fontSize={fontSize} {...props}>
+        <h6 {...rest} className={`vel-h6 vel-text ${className}`}>
           {children}
-        </StyledH6>
-      );
-    case "p":
+        </h6>
+      )
+    case 'p':
       return (
-        // @ts-ignore
-        <StyledP fontSize={fontSize} {...props}>
+        <p {...rest} className={`vel-p vel-text ${className}`}>
           {children}
-        </StyledP>
-      );
+        </p>
+      )
     default:
       return (
-        // @ts-ignore
-        <StyledH2 fontSize={fontSize} {...props}>
+        <h2 {...rest} className={`vel-h2 vel-text ${className}`}>
           {children}
-        </StyledH2>
-      );
+        </h2>
+      )
   }
-};
+}

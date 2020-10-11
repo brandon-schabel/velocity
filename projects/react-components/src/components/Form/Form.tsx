@@ -1,15 +1,5 @@
-import React from "react";
-import styled from "styled-components";
+import React from 'react'
 
-import { variantsAndStyles } from "../../utils/variantsAndStyles";
-import { responsiveStyleAndVariantsProps } from "../sharedPropTypes";
+import './form.styl'
 
-export interface FormProps extends responsiveStyleAndVariantsProps {}
-
-const StyledForm = styled.form`
-  border: none;
-  ${variantsAndStyles()}
-`;
-
-// @ts-ignore
-export const Form = (props: FormProps) => <StyledForm {...props} />;
+export const Form = (props: any) => <form className="vel-form" {...props} />

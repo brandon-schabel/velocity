@@ -22,9 +22,6 @@
     "create-major": "pnpm run prepare-version && npm version major",
     "build-storybook": "build-storybook -s public"
   },
-  "eslintConfig": {
-    "extends": "react-app"
-  },
   "browserslist": {
     "production": [
       ">0.2%",
@@ -56,8 +53,6 @@
     "react": "link:../../node_modules/react",
     "react-dom": "link:../../node_modules/react-dom",
     "style-loader": "^2.0.0",
-    "styled-breakpoints": "^8.1.0",
-    "styled-components": "link:../../node_modules/styled-components",
     "stylus": "^0.54.8",
     "stylus-loader": "^3.0.2",
     "typescript": "~3.7.2"

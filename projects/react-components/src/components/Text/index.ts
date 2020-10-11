@@ -1,2 +1,1 @@
-export { Text, TextProps} from './Text'
-export { textVariants } from './textVariants'
+export { Text, TextProps } from './Text'
