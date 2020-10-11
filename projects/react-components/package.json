@@ -22,9 +22,6 @@
     "create-major": "pnpm run prepare-version && npm version major",
     "build-storybook": "build-storybook -s public"
   },
-  "eslintConfig": {
-    "extends": "react-app"
-  },
   "browserslist": {
     "production": [
       ">0.2%",

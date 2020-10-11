@@ -1,19 +1,14 @@
-import React, { ButtonHTMLAttributes, ReactNode } from "react";
+import React, { ButtonHTMLAttributes, ReactNode } from 'react'
+import './Button.styl'
 
-import { StyledButton } from "./styles";
-import { responsiveStyleAndVariantsProps } from "../sharedPropTypes";
-import "./Button.styl";
-
-export interface ButtonProps
-  extends ButtonHTMLAttributes<any>,
-    responsiveStyleAndVariantsProps {
-  children?: ReactNode;
+export interface ButtonProps extends ButtonHTMLAttributes<any> {
+  children?: ReactNode
 }
 
-export const Button = (props: ButtonProps) => {
+export const Button = ({ children, ...rest }: ButtonProps) => {
   return (
-    <StyledButton {...props} className="vel-button">
-      {props.children}
-    </StyledButton>
-  );
-};
+    <button {...rest} className="vel-button">
+      {children}
+    </button>
+  )
+}
