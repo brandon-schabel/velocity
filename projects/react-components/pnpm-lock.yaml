@@ -4,24 +4,25 @@ devDependencies:
   '@storybook/addon-contexts': 5.3.21
   '@storybook/addon-links': 5.3.18
   '@storybook/addons': 5.3.18
-  '@storybook/preset-typescript': 3.0.0_typescript@3.7.5
-  '@storybook/react': 5.3.18_5b4f0c2220ad6f620ba190bd4d008d7e
-  '@types/node': 12.12.34
-  '@types/react': 16.9.32
-  '@types/react-dom': 16.9.6
-  '@types/styled-components': 5.0.1
+  '@storybook/preset-typescript': 3.0.0
+  '@storybook/react': 5.3.18_babel-loader@8.1.0
+  '@testing-library/jest-dom': 'link:../../node_modules/@testing-library/jest-dom'
+  '@testing-library/react': 'link:../../node_modules/@testing-library/react'
+  '@testing-library/user-event': 'link:../../node_modules/@testing-library/user-event'
+  '@types/node': 'link:../../node_modules/@types/node'
+  '@types/react': 'link:../../node_modules/@types/react'
+  '@types/react-dom': 'link:../../node_modules/@types/react-dom'
   babel-loader: 8.1.0
   cross-env: 7.0.2
   css-loader: 4.3.0
+  jest: 'link:../../node_modules/jest'
   microbundle-crl: 0.13.9
   react: 'link:../../node_modules/react'
   react-dom: 'link:../../node_modules/react-dom'
   style-loader: 2.0.0
-  styled-breakpoints: 8.1.0
-  styled-components: 'link:../../node_modules/styled-components'
   stylus: 0.54.8
   stylus-loader: 3.0.2_stylus@0.54.8
-  typescript: 3.7.5
+  typescript: 'link:../../node_modules/typescript'
 lockfileVersion: 5.1
 packages:
   /@babel/code-frame/7.5.5:
@@ -242,6 +243,10 @@ packages:
     dev: true
     resolution:
       integrity: sha512-Kag20n86cbO2AvHca6EJsvqAd82gc6VMGule4HwebwMlwkpXuVqrNRj6CkCV2sKxgi9MyAUnZVnZ6lJ1/vKhHQ==
+  /@babel/helper-plugin-utils/7.10.4:
+    dev: true
+    resolution:
+      integrity: sha512-O4KCvQA6lLiMU9l2eawBPMf1xPP8xPfB3iEQw150hOVTqj/rfXz0ThTb4HEzqQfs2Bmo5Ay8BzxfzVtBrr9dVg==
   /@babel/helper-plugin-utils/7.8.3:
     dev: true
     resolution:
@@ -528,7 +533,7 @@ packages:
       integrity: sha512-EVhjVsMpbhLw9ZfHWSx2iy13Q8Z/eg8e8ccVWt23sWQK5l1UdkoLJPN5w69UA4uITGBnEZD2JOe4QOHycYKv8A==
   /@babel/plugin-syntax-async-generators/7.8.4:
     dependencies:
-      '@babel/helper-plugin-utils': 7.8.3
+      '@babel/helper-plugin-utils': 7.10.4
     dev: true
     peerDependencies:
       '@babel/core': ^7.0.0-0
@@ -537,7 +542,7 @@ packages:
   /@babel/plugin-syntax-async-generators/7.8.4_@babel+core@7.9.0:
     dependencies:
       '@babel/core': 7.9.0
-      '@babel/helper-plugin-utils': 7.8.3
+      '@babel/helper-plugin-utils': 7.10.4
     dev: true
     peerDependencies:
       '@babel/core': ^7.0.0-0
@@ -587,7 +592,7 @@ packages:
       integrity: sha512-innAx3bUbA0KSYj2E2MNFSn9hiCeowOFLxlsuhXzw8hMQnzkDomUr9QCD7E9VF60NmnG1sNTuuv6Qf4f8INYsg==
   /@babel/plugin-syntax-json-strings/7.8.3:
     dependencies:
-      '@babel/helper-plugin-utils': 7.8.3
+      '@babel/helper-plugin-utils': 7.10.4
     dev: true
     peerDependencies:
       '@babel/core': ^7.0.0-0
@@ -596,7 +601,7 @@ packages:
   /@babel/plugin-syntax-json-strings/7.8.3_@babel+core@7.9.0:
     dependencies:
       '@babel/core': 7.9.0
-      '@babel/helper-plugin-utils': 7.8.3
+      '@babel/helper-plugin-utils': 7.10.4
     dev: true
     peerDependencies:
       '@babel/core': ^7.0.0-0
@@ -621,7 +626,7 @@ packages:
       integrity: sha512-WxdW9xyLgBdefoo0Ynn3MRSkhe5tFVxxKNVdnZSh318WrG2e2jH+E9wd/++JsqcLJZPfz87njQJ8j2Upjm0M0A==
   /@babel/plugin-syntax-nullish-coalescing-operator/7.8.3:
     dependencies:
-      '@babel/helper-plugin-utils': 7.8.3
+      '@babel/helper-plugin-utils': 7.10.4
     dev: true
     peerDependencies:
       '@babel/core': ^7.0.0-0
@@ -630,7 +635,7 @@ packages:
   /@babel/plugin-syntax-nullish-coalescing-operator/7.8.3_@babel+core@7.9.0:
     dependencies:
       '@babel/core': 7.9.0
-      '@babel/helper-plugin-utils': 7.8.3
+      '@babel/helper-plugin-utils': 7.10.4
     dev: true
     peerDependencies:
       '@babel/core': ^7.0.0-0
@@ -655,7 +660,7 @@ packages:
       integrity: sha512-H7dCMAdN83PcCmqmkHB5dtp+Xa9a6LKSvA2hiFBC/5alSHxM5VgWZXFqDi0YFe8XNGT6iCa+z4V4zSt/PdZ7Dw==
   /@babel/plugin-syntax-object-rest-spread/7.8.3:
     dependencies:
-      '@babel/helper-plugin-utils': 7.8.3
+      '@babel/helper-plugin-utils': 7.10.4
     dev: true
     peerDependencies:
       '@babel/core': ^7.0.0-0
@@ -664,7 +669,7 @@ packages:
   /@babel/plugin-syntax-object-rest-spread/7.8.3_@babel+core@7.9.0:
     dependencies:
       '@babel/core': 7.9.0
-      '@babel/helper-plugin-utils': 7.8.3
+      '@babel/helper-plugin-utils': 7.10.4
     dev: true
     peerDependencies:
       '@babel/core': ^7.0.0-0
@@ -672,7 +677,7 @@ packages:
       integrity: sha512-XoqMijGZb9y3y2XskN+P1wUGiVwWZ5JmoDRwx5+3GmEplNyVM2s2Dg8ILFQm8rWM48orGy5YpI5Bl8U1y7ydlA==
   /@babel/plugin-syntax-optional-catch-binding/7.8.3:
     dependencies:
-      '@babel/helper-plugin-utils': 7.8.3
+      '@babel/helper-plugin-utils': 7.10.4
     dev: true
     peerDependencies:
       '@babel/core': ^7.0.0-0
@@ -681,7 +686,7 @@ packages:
   /@babel/plugin-syntax-optional-catch-binding/7.8.3_@babel+core@7.9.0:
     dependencies:
       '@babel/core': 7.9.0
-      '@babel/helper-plugin-utils': 7.8.3
+      '@babel/helper-plugin-utils': 7.10.4
     dev: true
     peerDependencies:
       '@babel/core': ^7.0.0-0
@@ -689,7 +694,7 @@ packages:
       integrity: sha512-6VPD0Pc1lpTqw0aKoeRTMiB+kWhAoT24PA+ksWSBrFtl5SIRVpZlwN3NNPQjehA2E/91FV3RjLWoVTglWcSV3Q==
   /@babel/plugin-syntax-optional-chaining/7.8.3:
     dependencies:
-      '@babel/helper-plugin-utils': 7.8.3
+      '@babel/helper-plugin-utils': 7.10.4
     dev: true
     peerDependencies:
       '@babel/core': ^7.0.0-0
@@ -698,7 +703,7 @@ packages:
   /@babel/plugin-syntax-optional-chaining/7.8.3_@babel+core@7.9.0:
     dependencies:
       '@babel/core': 7.9.0
-      '@babel/helper-plugin-utils': 7.8.3
+      '@babel/helper-plugin-utils': 7.10.4
     dev: true
     peerDependencies:
       '@babel/core': ^7.0.0-0
@@ -2221,7 +2226,7 @@ packages:
     dev: true
     resolution:
       integrity: sha512-/Zsm1sKAh6pzQv8jQUmuhM7nuM01ZljIRKy8p2HjPNlMjDB5yaRkBfyeAUXUg+qXNI6aHVWa4jGdPEdwwY4oLA==
-  /@storybook/core/5.3.18_5b4f0c2220ad6f620ba190bd4d008d7e:
+  /@storybook/core/5.3.18_babel-loader@8.1.0:
     dependencies:
       '@babel/plugin-proposal-class-properties': 7.8.3
       '@babel/plugin-proposal-object-rest-spread': 7.9.0
@@ -2274,7 +2279,7 @@ packages:
       micromatch: 4.0.2
       node-fetch: 2.6.0
       open: 7.0.3
-      pnp-webpack-plugin: 1.5.0_typescript@3.7.5
+      pnp-webpack-plugin: 1.5.0
       postcss-flexbugs-fixes: 4.2.0
       postcss-loader: 3.0.0
       pretty-hrtime: 1.0.3
@@ -2303,7 +2308,6 @@ packages:
       babel-loader: ^7.0.0 || ^8.0.0
       react: '*'
       react-dom: '*'
-      typescript: '*'
     resolution:
       integrity: sha512-XQb/UQb+Ohuaw0GhKKYzvmuuh5Tit93f2cLZD9QCSWUPvDGmLG5g91Y9NbUr4Ap3mANT3NksMNhkAV0GxExEkg==
   /@storybook/csf/0.0.1:
@@ -2323,26 +2327,25 @@ packages:
     dev: true
     resolution:
       integrity: sha512-Go/hdtaPTtjgJP+GYk8VXcOmecrdG7cXm0yyTlatd6s8xXI0txHme1/0MOZmEPows1Ec7KAQ20+NnaCGUPZUUg==
-  /@storybook/preset-typescript/3.0.0_typescript@3.7.5:
+  /@storybook/preset-typescript/3.0.0:
     dependencies:
       '@babel/preset-typescript': 7.9.0
       '@storybook/node-logger': 5.3.18
       '@types/babel__core': 7.1.7
       babel-preset-typescript-vue: 1.0.3
       fork-ts-checker-webpack-plugin: 4.1.2
-      typescript: 3.7.5
     dev: true
     peerDependencies:
       typescript: '>=3.4'
     resolution:
       integrity: sha512-tEbFWg5h/8SPfSCNXPxyqY418704K14q5H/xb9t0ARMXK3kZPTkKqKvdTvYg3UEKBBYbc+GA57UWaL+9b+DbDg==
-  /@storybook/react/5.3.18_5b4f0c2220ad6f620ba190bd4d008d7e:
+  /@storybook/react/5.3.18_babel-loader@8.1.0:
     dependencies:
       '@babel/plugin-transform-react-constant-elements': 7.9.0
       '@babel/preset-flow': 7.9.0
       '@babel/preset-react': 7.9.4
       '@storybook/addons': 5.3.18
-      '@storybook/core': 5.3.18_5b4f0c2220ad6f620ba190bd4d008d7e
+      '@storybook/core': 5.3.18_babel-loader@8.1.0
       '@storybook/node-logger': 5.3.18
       '@svgr/webpack': 4.3.3
       '@types/webpack-env': 1.15.1
@@ -2369,7 +2372,6 @@ packages:
       babel-loader: ^7.0.0 || ^8.0.0
       react: '*'
       react-dom: '*'
-      typescript: '*'
     resolution:
       integrity: sha512-6yNg+phcrEqEjC2NOiu0mJuxbTwX7yzbkcusIn0S7N/KTXNO7CGvYjAkdjfw0gTLjfuVDZIjDQfoosslvfsj3w==
   /@storybook/router/5.3.18:
@@ -2714,13 +2716,6 @@ packages:
     dev: true
     resolution:
       integrity: sha512-wLD/Aq2VggCJXSjxEwrMafIP51Z+13H78nXIX0ABEuIGhmB5sNGbR113MOKo+yfw+RDo1ZU3DM6yfnnRF/+ouw==
-  /@types/hoist-non-react-statics/3.3.1:
-    dependencies:
-      '@types/react': 16.9.32
-      hoist-non-react-statics: 3.3.2
-    dev: true
-    resolution:
-      integrity: sha512-iMIqiko6ooLrTh1joXodJK5X9xeEALT1kM5G3ZLhD3hszxBdIEd5C75U834D9mLcINgD4OyZf5uQXjkuYydWvA==
   /@types/html-minifier-terser/5.0.0:
     dev: true
     resolution:
@@ -2760,18 +2755,6 @@ packages:
     dev: true
     resolution:
       integrity: sha512-DZgYfxUIlVSjvf0AvBbYNbpXLrTFNNpU1HrvCRbnMtx3nvGUUWC1/zlAe4dD4FCPFtc+LQuIPEsDiTb0zQkthg==
-  /@types/react-dom/16.9.6:
-    dependencies:
-      '@types/react': 16.9.32
-    dev: true
-    resolution:
-      integrity: sha512-S6ihtlPMDotrlCJE9ST1fRmYrQNNwfgL61UB4I1W7M6kPulUKx9fXAleW5zpdIjUQ4fTaaog8uERezjsGUj9HQ==
-  /@types/react-native/0.62.1:
-    dependencies:
-      '@types/react': 16.9.32
-    dev: true
-    resolution:
-      integrity: sha512-4uKqYGek9/OstJWW0hEfF/6fx8BzNkzdAFxeY+VOxec+SPKK/hvGEjnX6+0jV1MnJDBHYKdWfWA4sYCQ8G3sqA==
   /@types/react-syntax-highlighter/11.0.4:
     dependencies:
       '@types/react': 16.9.32
@@ -2801,15 +2784,6 @@ packages:
     dev: true
     resolution:
       integrity: sha512-K5K+yml8LTo9bWJI/rECfIPrGgxdpeNbj+d53lwN4QjW1MCwlkhUms+gtdzigTeUyBr09+u8BwOIY3MXvHdcsA==
-  /@types/styled-components/5.0.1:
-    dependencies:
-      '@types/hoist-non-react-statics': 3.3.1
-      '@types/react': 16.9.32
-      '@types/react-native': 0.62.1
-      csstype: 2.6.10
-    dev: true
-    resolution:
-      integrity: sha512-1yRYO1dAE2MGEuYKF1yQFeMdoyerIQn6ZDnFFkxZamcs3rn8RQVn98edPsTROAxbTz81tqnVN4BJ3Qs1cm/tKg==
   /@types/tapable/1.0.5:
     dev: true
     resolution:
@@ -7772,6 +7746,14 @@ packages:
       node: '>=6'
     resolution:
       integrity: sha512-WGR+xHecKTr7EbUEhyLSh5Dube9JtdiG78ufaeLxTgpudf/20KqyMioIUZJAezlTIi6evxuoUs9YXc11cU+yzQ==
+  /p-limit/2.3.0:
+    dependencies:
+      p-try: 2.2.0
+    dev: true
+    engines:
+      node: '>=6'
+    resolution:
+      integrity: sha512-//88mFWSJx8lxCzwdAABTJL2MyWB12+eIY7MDL2SqLmAkeKU9qxRvWuSyTjm3FUmpBEMuFfckAIqEaVGUDxb6w==
   /p-locate/2.0.0:
     dependencies:
       p-limit: 1.3.0
@@ -7790,7 +7772,7 @@ packages:
       integrity: sha512-x+12w/To+4GFfgJhBEpiDcLozRJGegY+Ei7/z0tSLkMmxGZNybVMSfWj9aJn8Z5Fc7dBUNJOOVgPv2H7IwulSQ==
   /p-locate/4.1.0:
     dependencies:
-      p-limit: 2.2.2
+      p-limit: 2.3.0
     dev: true
     engines:
       node: '>=8'
@@ -8024,14 +8006,12 @@ packages:
       node: '>=4'
     resolution:
       integrity: sha1-yBmscoBZpGHKscOImivjxJoATX8=
-  /pnp-webpack-plugin/1.5.0_typescript@3.7.5:
+  /pnp-webpack-plugin/1.5.0:
     dependencies:
-      ts-pnp: 1.2.0_typescript@3.7.5
+      ts-pnp: 1.2.0
     dev: true
     engines:
       node: '>=6'
-    peerDependencies:
-      typescript: '*'
     resolution:
       integrity: sha512-jd9olUr9D7do+RN8Wspzhpxhgp1n6Vd0NtQ4SFkmIACZoEL1nkyAdW9Ygrinjec0vgDcWjscFQQ1gDW8rsfKTg==
   /polished/3.5.1:
@@ -10035,10 +10015,6 @@ packages:
       webpack: ^4.0.0 || ^5.0.0
     resolution:
       integrity: sha512-Z0gYUJmzZ6ZdRUqpg1r8GsaFKypE+3xAzuFeMuoHgjc9KZv3wMyCRjQIWEbhoFSq7+7yoHXySDJyyWQaPajeiQ==
-  /styled-breakpoints/8.1.0:
-    dev: true
-    resolution:
-      integrity: sha512-hGYV0bWKoiM437xBoSAd034BhMAVoDcbuWmDNMEasj0Rct6+34p1lqWphfz/IHYIyvq/ldFQWNf9Gm1fEvLGvA==
   /stylehacks/4.0.3:
     dependencies:
       browserslist: 4.11.1
@@ -10335,9 +10311,7 @@ packages:
       node: '>=6.10'
     resolution:
       integrity: sha512-UGTRZu1evMw4uTPyYF66/KFd22XiU+jMaIuHrkIHQ2GivAXVlLV0v/vHrpOuTRf9BmpNHi/SO7Vd0rLu0y57jg==
-  /ts-pnp/1.2.0_typescript@3.7.5:
-    dependencies:
-      typescript: 3.7.5
+  /ts-pnp/1.2.0:
     dev: true
     engines:
       node: '>=6'
@@ -10389,13 +10363,6 @@ packages:
     dev: true
     resolution:
       integrity: sha1-hnrHTjhkGHsdPUfZlqeOxciDB3c=
-  /typescript/3.7.5:
-    dev: true
-    engines:
-      node: '>=4.2.0'
-    hasBin: true
-    resolution:
-      integrity: sha512-/P5lkRXkWHNAbcJIiHPfRoKqyd7bsyCma1hZNUGfn20qm64T6ZBlrzprymeu918H+mB/0rIg2gGK/BXkhhYgBw==
   /typescript/3.8.3:
     dev: true
     engines:
@@ -10831,19 +10798,20 @@ specifiers:
   '@storybook/addons': ^5.3.18
   '@storybook/preset-typescript': ^3.0.0
   '@storybook/react': ^5.3.18
-  '@types/node': ^12.0.0
-  '@types/react': ^16.9.32
-  '@types/react-dom': ^16.9.6
-  '@types/styled-components': ^5.0.1
+  '@testing-library/jest-dom': 'link:../../node_modules/@testing-library/jest-dom'
+  '@testing-library/react': 'link:../../node_modules/@testing-library/react'
+  '@testing-library/user-event': 'link:../../node_modules/@testing-library/user-event'
+  '@types/node': 'link:../../node_modules/@types/node'
+  '@types/react': 'link:../../node_modules/@types/react'
+  '@types/react-dom': 'link:../../node_modules/@types/react-dom'
   babel-loader: 8.1.0
   cross-env: ^7.0.2
   css-loader: ^4.3.0
+  jest: 'link:../../node_modules/jest'
   microbundle-crl: ^0.13.9
   react: 'link:../../node_modules/react'
   react-dom: 'link:../../node_modules/react-dom'
   style-loader: ^2.0.0
-  styled-breakpoints: ^8.1.0
-  styled-components: 'link:../../node_modules/styled-components'
   stylus: ^0.54.8
   stylus-loader: ^3.0.2
-  typescript: ~3.7.2
+  typescript: 'link:../../node_modules/typescript'
