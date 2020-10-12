@@ -1,6 +1,7 @@
 {
   "compilerOptions": {
     "outDir": "dist",
+    "baseUrl": ".",
     "module": "esnext",
     "lib": ["dom", "esnext"],
     "moduleResolution": "node",
@@ -17,7 +18,10 @@
     "noUnusedParameters": true,
     "allowSyntheticDefaultImports": true,
     "allowJs": true,
-    "allowUnusedLabels": true
+    "allowUnusedLabels": true,
+    "paths": {
+      "@testing-library/react": ["../../node_modules/@testing-library/react"]
+    }
   },
   "include": ["src"],
   "exclude": ["node_modules", "dist", "example"]
