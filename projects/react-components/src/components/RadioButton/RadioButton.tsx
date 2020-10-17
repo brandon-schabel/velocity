@@ -1,26 +1,24 @@
-import React, {ReactNode}  from "react";
-import { StyledRadioButton } from "./styles";
+import React, { ReactNode } from 'react'
 
-import { responsiveStyleAndVariantsProps, fontSize } from "../sharedPropTypes";
+import './radioButton.styl'
 
-export interface RadioButtonProps extends responsiveStyleAndVariantsProps {
-  fontSize?: fontSize;
-  children?: ReactNode;
-  index: string | number;
-  label?: string | null;
-  value: any;
-  additionalValues?: any;
+export interface RadioButtonProps {
+  children?: ReactNode
+  index: string | number
+  label?: string | null
+  value: any
+  additionalValues?: any
   onRadioClick?: (
     e: React.MouseEvent<HTMLInputElement>,
     index: number | string,
     additionalValues: any
-  ) => void;
+  ) => void
   onRadioChange?: (
     e: React.ChangeEvent<HTMLInputElement>,
     index: number | string,
     additionalValues: any
-  ) => void;
-  checked?: boolean;
+  ) => void
+  checked?: boolean
 }
 
 export const RadioButton = ({
@@ -29,26 +27,29 @@ export const RadioButton = ({
   label = null,
   value,
   additionalValues = null, //can be use if you prefer to pass in an object/array as the value
-  onRadioClick = () => {},
-  onRadioChange = () => {},
+  onRadioClick = () => null,
+  onRadioChange = () => null,
   checked = false,
   ...props
 }: RadioButtonProps) => {
   const handleClick = (e: React.MouseEvent<HTMLInputElement>) => {
-    onRadioClick(e, index, additionalValues);
-  };
+    onRadioClick(e, index, additionalValues)
+  }
+
   const handleOnChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    onRadioChange(e, index, additionalValues);
-  };
+    onRadioChange(e, index, additionalValues)
+  }
+
   return (
     <React.Fragment>
-      <label>
-        <StyledRadioButton
+      <label className="vel-radio-label">
+        <input
           type="radio"
           checked={checked}
           value={value}
           onClick={handleClick}
           onChange={handleOnChange}
+          className="vel-radio"
           {...props}
         />
         {label && label}
@@ -56,5 +57,5 @@ export const RadioButton = ({
       </label>
       <br />
     </React.Fragment>
-  );
-};
+  )
+}
