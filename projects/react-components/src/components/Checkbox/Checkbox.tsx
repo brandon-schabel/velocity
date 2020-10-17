@@ -18,7 +18,7 @@ export const Checkbox = ({
   return (
     <>
       {Array.isArray(label) &&
-        label.map(currentCheckbox => {
+         label.map(currentCheckbox => {
           return (
             <>
               <input
