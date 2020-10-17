@@ -5,13 +5,13 @@ import './checkbox.styl'
 export interface CheckboxProps extends InputHTMLAttributes<any> {
   children?: ReactNode
   className?: string
-    label?: string
+  label?: string
 }
 
 export const Checkbox = ({
   children,
   className = '',
-                             label,
+  label,
   ...rest
 }: CheckboxProps) => {
   return (

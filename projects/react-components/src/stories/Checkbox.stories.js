@@ -10,5 +10,9 @@ export default {
   component: Checkbox,
 }
 export const Component = () => {
-  return (<VelocityThemeProvider><Checkbox label="My Checkbox" /></VelocityThemeProvider>)
+  return (
+    <VelocityThemeProvider>
+      <Checkbox label="My Checkbox" />
+    </VelocityThemeProvider>
+  )
 }
