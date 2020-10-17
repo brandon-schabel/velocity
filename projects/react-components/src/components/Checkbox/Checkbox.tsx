@@ -1,4 +1,4 @@
-import React, {InputHTMLAttributes, ReactNode} from 'react'
+import React, { InputHTMLAttributes, ReactNode } from 'react'
 
 import './checkbox.styl'
 
@@ -9,26 +9,26 @@ export interface CheckboxProps extends InputHTMLAttributes<any> {
 }
 
 export const Checkbox = ({
- children,
- className = '',
- label,
-   ...rest
+  children,
+  className = '',
+  label,
+  ...rest
 }: CheckboxProps) => {
   return (
     <>
       {Array.isArray(label) &&
-      label.map(currentCheckbox => {
-        return (
-          <>
-            <input
-              type="checkbox"
-              {...rest}
-              className={`vel-checkbox ${className}`}
-            />
-            <label htmlFor="scales">{currentCheckbox}</label>
-          </>
-        )
-      })}
+        label.map(currentCheckbox => {
+          return (
+            <>
+              <input
+                type="checkbox"
+                {...rest}
+                className={`vel-checkbox ${className}`}
+              />
+              <label htmlFor="scales">{currentCheckbox}</label>
+            </>
+          )
+        })}
     </>
   )
 }
