@@ -14,14 +14,21 @@ export const Checkbox = ({
   label,
   ...rest
 }: CheckboxProps) => {
+    console.log("Props", label)
   return (
     <>
+        {Array.isArray(label) && label.map(currentCheckbox => {
+          return(
+            <>
       <input
         type="checkbox"
         {...rest}
         className={`vel-checkbox ${className}`}
       />
-      <label htmlFor="scales">{label}</label>
+      <label htmlFor="scales">{currentCheckbox}</label>
+                </>
+          )
+        })}
     </>
   )
 }

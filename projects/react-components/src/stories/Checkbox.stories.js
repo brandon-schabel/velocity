@@ -12,7 +12,7 @@ export default {
 export const Component = () => {
   return (
     <VelocityThemeProvider>
-      <Checkbox label="My Checkbox" />
+      <Checkbox label={['My Checkbox']} />
     </VelocityThemeProvider>
   )
 }
