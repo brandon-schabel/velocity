@@ -14,11 +14,10 @@ export const Checkbox = ({
   label,
   ...rest
 }: CheckboxProps) => {
-  console.log('Props', label)
   return (
     <>
       {Array.isArray(label) &&
-         label.map(currentCheckbox => {
+        label.map(currentCheckbox => {
           return (
             <>
               <input
