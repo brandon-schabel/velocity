@@ -6,7 +6,7 @@ import {
 } from '../utils/VelocityThemeContext'
 
 export default {
-  title: 'Button',
+  title: 'Checkbox',
   component: Checkbox,
 }
 export const Component = () => {
