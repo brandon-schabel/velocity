@@ -1,16 +1,14 @@
 import React, { useState, useContext } from 'react'
 import { Checkbox } from '../components'
 import {
-    VelocityThemeProvider,
-    VelocityThemeContext,
+  VelocityThemeProvider,
+  VelocityThemeContext,
 } from '../utils/VelocityThemeContext'
 
 export default {
-    title: 'Button',
-    component: Checkbox,
+  title: 'Button',
+  component: Checkbox,
 }
 export const Component = () => {
-
-    return <Checkbox ckBoxLabel="123" />
-
+  return (<VelocityThemeProvider><Checkbox label="My Checkbox" /></VelocityThemeProvider>)
 }

@@ -17,12 +17,10 @@ export const Component = () => {
   //   theme === "dark" ? setTheme("light") : setTheme("dark");
   // };
 
-  return <Button>Click Me Plz</Button>
-
-  //return (
-    // <VelocityThemeProvider>
+  return (
+    <VelocityThemeProvider>
       {/*<Button onClick={changeTheme}>Click Me Plz</Button>*/}
-      // <Button>Click Me Plz</Button>
-    // </VelocityThemeProvider>
-  //)
+      <Button>Click Me Plz</Button>
+    </VelocityThemeProvider>
+  )
 }
