@@ -15,7 +15,7 @@
     "build-watch": "microbundle-crl watch --no-compress --format modern,cjs",
     "postbuild": "tsc --emitDeclarationOnly",
     "test": "jest -c ./jest.config.js",
-    "test:watch": "npm run test --watch",
+    "test:watch": "jest -c ./jest.config.js --watch",
     "storybook": "start-storybook -p 9009 -s public",
     "prepare-version": "pnpm install && pnpm run build",
     "create-patch": "pnpm run prepare-version && pnpm version patch",

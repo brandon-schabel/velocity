@@ -1,6 +1,7 @@
 // basic config for wrapping each component before test, https://testing-library.com/docs/react-testing-library/setup
 import React, { ReactNode } from 'react'
 import { render } from '@testing-library/react'
+import userEvent from '@testing-library/user-event'
 
 interface allTheProviders {
   children?: ReactNode
@@ -17,4 +18,4 @@ const customRender = (ui: any, options: any) =>
 export * from '@testing-library/react'
 
 // override render method
-export { customRender as render }
+export { customRender as render, userEvent }

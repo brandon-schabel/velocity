@@ -6,6 +6,7 @@ export interface ImageProps extends ImgHTMLAttributes<any> {
   children?: ReactNode
 }
 
+// TODO: add background image functionality
 export const Image = ({ children, alt, ...rest }: ImageProps) => {
   return (
     <img className="vel-image" alt={alt} {...rest}>
