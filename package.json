@@ -7,6 +7,7 @@
   "author": "",
   "main": "index.js",
   "scripts": {
+    "install": "npm install pnpm && pnpm install -r",
     "build": "pnpm recursive run build",
     "clean": "pnpm recursive exec -- rm -rf node_modules; rm shrinkwrap.yaml; rm -rf node_modules",
     "server:start": "pnpm recursive run start --filter @tesla-deets/api-server",
