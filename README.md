@@ -1,4 +1,4 @@
-# Tesla Deets Monorepo
+# Velocity Monorepo
 
 
 Get GitHub access token for packages(enabled Create, Update, Delete)
