@@ -1,5 +1,5 @@
 {
-  "name": "@brandon-schabel/velocity-components",
+  "name": "@brandon-schabel/velocity-hooks",
   "version": "0.0.4",
   "main": "dist/index.js",
   "module": "dist/index.modern.js",
@@ -37,6 +37,7 @@
   },
   "devDependencies": {
     "@babel/plugin-proposal-decorators": "^7.12.1",
+    "@storybook/addon-actions": "^5.3.21",
     "@storybook/addon-contexts": "^5.3.21",
     "@storybook/addon-links": "^5.3.21",
     "@storybook/addons": "^5.3.21",
